@@ -1,0 +1,35 @@
+{
+  "expo": {
+    "name": "basket",
+    "slug": "basket",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#102855"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.basket.app"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#102855"
+      },
+      "package": "com.basket.app"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {},
+    "plugins": ["expo-font"],
+    "newArchEnabled": true,
+    "runtimeVersion": {
+      "policy": "appVersion"
+    }
+  }
+}
