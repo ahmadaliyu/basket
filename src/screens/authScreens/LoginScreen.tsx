@@ -33,8 +33,6 @@ export const LoginScreen = ({
     password: '',
   });
 
-  console.log(error, 777, 'or data as', data);
-
   // function to login the user
   const handleLogin = async () => {
     console.log(inputValues, 999);

@@ -1,10 +1,11 @@
 import React from 'react';
-import {Image, Platform, StyleSheet, View} from 'react-native';
+import {Platform, StyleSheet, View} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {colors, fonts, globalStyles} from '@/utils';
 import {HomeStack} from './HomeStack';
 import {getFocusedRouteNameFromRoute} from '@react-navigation/native';
 import {BottomNavigationParamList} from './types';
+import Ionicons from '@expo/vector-icons/Ionicons';
 
 import {CustomText} from '@/components';
 import {AccountScreen} from '@/screens';
@@ -40,16 +41,13 @@ export const BottomTabNavigation = () => {
           // borderWidth: 3,
         },
         tabBarStyle: {
-          height: Platform.OS === 'android' ? 50 : 85,
+          height: Platform.OS === 'android' ? 60 : 85,
           justifyContent: 'center',
           alignItems: 'center',
-          // borderTopWidth: 0,
           elevation: 0,
-          // borderWidth: 2,
           width: '100%',
           alignSelf: 'center',
-          // bottom: 20,
-          // borderRadius: 100,
+
           backgroundColor: colors.white,
           display:
             getFocusedRouteNameFromRoute(route) === 'Home' ||
@@ -71,14 +69,10 @@ export const BottomTabNavigation = () => {
         component={HomeStack}
         options={{
           tabBarIcon: ({focused}) => (
-            <Image
-              style={[
-                styles.image,
-                {
-                  tintColor: focused ? colors.primary : colors.gray,
-                },
-              ]}
-              source={require('../../assets/icons/home-active.png')}
+            <Ionicons
+              name="home-outline"
+              color={focused ? 'orange' : 'dark'}
+              size={20}
             />
           ),
           tabBarLabel: 'Home',
@@ -89,14 +83,10 @@ export const BottomTabNavigation = () => {
         component={SavedScreen}
         options={{
           tabBarIcon: ({focused}) => (
-            <Image
-              style={[
-                styles.image,
-                {
-                  tintColor: focused ? colors.primary : colors.gray,
-                },
-              ]}
-              source={require('../../assets/icons/home-active.png')}
+            <Ionicons
+              name="star-outline"
+              color={focused ? 'orange' : 'dark'}
+              size={20}
             />
           ),
           tabBarLabel: 'Saved',
@@ -107,14 +97,10 @@ export const BottomTabNavigation = () => {
         component={AccountScreen}
         options={{
           tabBarIcon: ({focused}) => (
-            <Image
-              style={[
-                styles.image,
-                {
-                  tintColor: focused ? colors.primary : colors.gray,
-                },
-              ]}
-              source={require('../../assets/icons/home-active.png')}
+            <Ionicons
+              name="person-outline"
+              color={focused ? 'orange' : 'dark'}
+              size={20}
             />
           ),
           tabBarLabel: 'Account',
@@ -125,14 +111,10 @@ export const BottomTabNavigation = () => {
         component={CartScreen}
         options={{
           tabBarIcon: ({focused}) => (
-            <Image
-              style={[
-                styles.image,
-                {
-                  tintColor: focused ? colors.primary : colors.gray,
-                },
-              ]}
-              source={require('../../assets/icons/home-active.png')}
+            <Ionicons
+              name="cart-outline"
+              color={focused ? 'orange' : 'dark'}
+              size={20}
             />
           ),
           tabBarLabel: 'Cart',

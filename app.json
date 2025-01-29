@@ -25,8 +25,14 @@
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "extra": {},
-    "plugins": ["expo-font"],
+    "extra": {
+      "eas": {
+        "projectId": "80513430-838b-49c1-b661-45a6e240684d"
+      }
+    },
+    "plugins": [
+      "expo-font"
+    ],
     "newArchEnabled": true,
     "runtimeVersion": {
       "policy": "appVersion"

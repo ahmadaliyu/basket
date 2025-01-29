@@ -1,14 +1,13 @@
 import React from 'react';
 import {
   View,
-  Text,
   TextInput,
   TouchableOpacity,
   Image,
   StyleSheet,
   ScrollView,
 } from 'react-native';
-import {Ionicons, MaterialIcons} from '@expo/vector-icons';
+import {Ionicons} from '@expo/vector-icons';
 import {CustomText, ScreenWrapper} from '@/components';
 import {useAppDispatch, useAppSelector} from '@/store/hooks';
 import {logout} from '@/store/reducers/userSlice';

@@ -1,13 +1,12 @@
 import React from 'react';
 import {
   StyleSheet,
-  ScrollView,
   View,
   ActivityIndicator,
   FlatList,
   Image,
 } from 'react-native';
-import {CustomText, ScreenWrapper} from '@/components';
+import {CustomText, ScreenHeader, ScreenWrapper} from '@/components';
 import {colors, globalStyles} from '@/utils';
 import {useGetUsersQuery} from '@/service/appApi';
 
@@ -34,6 +33,7 @@ export const HomeScreen = () => {
 
   return (
     <ScreenWrapper>
+      <ScreenHeader />
       <View style={styles.container}>
         {isLoading ? (
           <ActivityIndicator size="large" color="orange" />
